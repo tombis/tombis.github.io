@@ -1,3 +1,5 @@
+// out: main.css, sourcemap: true, compress: true
+
 /*
 @import "variables";
 @import "opacity";
@@ -120,41 +122,23 @@ textarea {
   }
 }
 
-.rotate() {
+.rotate(@deg: -90deg) {
 
   /* Safari */
-  -webkit-transform: rotate(-90deg);
+  -webkit-transform: rotate(@deg);
 
   /* Firefox */
-  -moz-transform: rotate(-90deg);
+  -moz-transform: rotate(@deg);
 
   /* IE */
-  -ms-transform: rotate(-90deg);
+  -ms-transform: rotate(@deg);
 
   /* Opera */
-  -o-transform: rotate(-90deg);
+  -o-transform: rotate(@deg);
 
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
-}
-
-@font-face {
-  font-family: 'dickie';
-  src: url('../font/dickie.eot'); /* IE9 Compat Modes */
-  src: url('../font/dickie.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../font/dickie.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../font/dickie.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('../font/dickie.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'skinny';
-  src: url('../font/Skinny-Regular.eot'); /* IE9 Compat Modes */
-  src: url('../font/Skinny-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../font/Skinny-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-  url('../font/Skinny-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  url('../font/Skinny-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
@@ -200,7 +184,6 @@ div.main {
     }
 
     .header-title {
-      //font-family: 'Fenix', serif;
       font-family: 'oldnewspaper', sans-serif;
       font-size: 56px;
       @media (min-width: @maxed-width) {
@@ -235,7 +218,7 @@ div.main {
         cursor: pointer;
         color: white;
         @media (min-width: @maxed-width) {
-          width: 100px;
+          width: 125px;
         }
         font-size: 24px;
         display: inline-block;
@@ -310,13 +293,23 @@ div.main {
         .subtitle {
           @media (min-width: @maxed-width) {
             position: relative;
-            top: 384px;
+            top: 436px;
             right: -488px;
             height: 0;
             white-space: nowrap;
           }
 
           font-size: 28px;
+        }
+
+        .copyright {
+          @media (min-width: @maxed-width) {
+            .rotate(90deg);
+
+            position: relative;
+            left: 508px;
+            top: 222px;
+          }
         }
       }
 
@@ -332,7 +325,6 @@ div.main {
         fieldset {
           font-family: 'Gentium Basic', serif;
           font-size: 20px;
-          //background-color: rgba(0,0,0,0.7);
           legend {
             font-size: 26px;
             border-bottom: 1px solid white;
