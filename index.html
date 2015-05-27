@@ -73,33 +73,46 @@
                 </div>
             </div>
 
-            <div class="block hidden page" id="page2">
-
-                <fieldset>
-                    <legend>Aanbod</legend>
-                    <p>
-                        Anders gebekt richt zich op procesbegeleiding en competentie-ontwikkeling met betrekking tot
-                        (therapeutische) gespreks- en relationele vaardigheden.
-                    </p>
-
-                    <p>
-                        Procesbegeleiding kan onder de vorm van individuele of teambegeleiding. De bedoeling is om
-                        mensen en groepen tijd en ruimte te bieden waarin ze kunnen leren over zichzelf, over elkaar
-                        en
-                        over hun cliënten/ klanten. Reflectie over casussen, het eigen ontwikkelingsproces
-                        als persoon of professional en interventies in groepsontwikkeling behoren tot de
-                        mogelijkheden.
-
-                    </p>
-
-                    <p>
-                        De workshops en vormingen in (therapeutische) gespreks- en relationele vaardigheden bieden
-                        theoretische handvatten en oefeningen die aansluiten bij de eigen praktijk.
-                    </p>
-
-                    <p>Leren via doen, ervaren en reflectie staan centraal.</p>
-                </fieldset>
-
+            <div class="hidden page" id="page2">
+                <div class="roadmap">
+                    <div class="title-anchor">
+                        <h3 class="title-a">
+                            Opbouwen van veerkrachtige werkrelaties
+                        </h3>
+                        <h3 class="title-b">
+                            Leren via doen, ervaren & reflecteren
+                        </h3>
+                        <h3 class="title-c">
+                            Procesbegeleiding & opleiding, training
+                        </h3>
+                    </div>
+                    <div class="mask-anchor">
+                        <div class="mask mask-a">
+                            <span class="label-a">omgaan met lastige emoties &amp; situaties</span>
+                        </div>
+                    </div>
+                    <div class="mask-anchor">
+                        <div class="mask mask-b">
+                            <span class="label-b">gespreks &amp; relatievaardigheden</span>
+                        </div>
+                    </div>
+                    <div class="mask-anchor">
+                        <div class="mask mask-c">
+                            <span class="label-c">mensen stimuleren</span>
+                        </div>
+                    </div>
+                    <div class="mask-anchor">
+                        <div class="mask mask-d">
+                            <span class="label-d">goed samenwerken</span>
+                        </div>
+                    </div>
+                    <div class="mask-anchor">
+                        <div class="mask mask-e">
+                            <span class="label-e">zorgzaam omgaan met elkaar</span>
+                        </div>
+                    </div>
+                    <img src="img/pinguins.png" alt="verhaal" id="roadmap"/>
+                </div>
             </div>
 
             <div class="block hidden page" id="page3">
@@ -154,19 +167,59 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+
+<script>
     $(function () {
-        $(".tabs li").click(function (e) {
+        var masks = $('.mask');
+
+        masks.mouseout(function () {
+            masks.removeClass('obfuscated');
+            masks.removeClass('highlighted');
+        });
+
+        masks.mousemove(function () {
+            if (timer != null) {
+                clearTimeout(timer);
+                timer = null;
+            }
+            masks.addClass('obfuscated');
+            $(this).removeClass('obfuscated');
+            $(this).addClass('highlighted');
+        });
+
+        var current = 0;
+        var timer = null;
+
+        var step = function () {
+            if (current >= masks.length) {
+                current = 0;
+                masks.removeClass('obfuscated');
+                masks.removeClass('highlighted');
+            } else {
+                masks.addClass('obfuscated');
+                masks.removeClass('highlighted');
+                var activeImage = $(masks[current++]);
+                activeImage.addClass('highlighted');
+                activeImage.removeClass('obfuscated');
+            }
+            timer = setTimeout(step, 2000)
+        };
+
+        $(".tabs li").click(function () {
             $(".page").addClass("hidden");
             $(".tabs li").removeClass("active");
             $(this).addClass("active");
             var selectedPage = $(this).attr("data-page");
             $("#" + selectedPage).removeClass("hidden");
             $(document.body).css('background-color', $(this).attr("data-bg-color"));
+
+            if (selectedPage === 'page2') {
+                current = 0;
+                timer = setTimeout(step, 1000);
+            }
         });
     });
-</script>
-<script>
+
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
