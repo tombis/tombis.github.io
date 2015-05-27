@@ -308,7 +308,7 @@ div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-c {
   top: 360px;
 }
 div.main div.body-outer div.body-inner .roadmap .obfuscated {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 div.main div.body-outer div.body-inner .roadmap .highlighted span {
   visibility: visible !important;
