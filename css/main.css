@@ -266,6 +266,10 @@ div.main div.body-outer div.body-inner .cover .subtitle {
     top: 222px;
   }
 }
+div.main div.body-outer div.body-inner .roadmap {
+  width: 800px;
+  margin: 0 auto;
+}
 div.main div.body-outer div.body-inner .roadmap .title-anchor {
   height: 0;
 }
@@ -281,15 +285,15 @@ div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-a {
   -o-transform: rotate(-90deg);
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  left: -530px;
-  top: 194px;
-  font-size: 30px;
+  left: -426px;
+  top: 159px;
+  font-size: 28px;
 }
 div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-b {
   position: relative;
-  left: 440px;
-  font-size: 30px;
-  top: 680px;
+  left: 279px;
+  font-size: 28px;
+  top: 530px;
 }
 div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-c {
   position: relative;
@@ -303,9 +307,9 @@ div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-c {
   -o-transform: rotate(90deg);
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  left: 530px;
-  font-size: 30px;
-  top: 360px;
+  left: 425px;
+  font-size: 28px;
+  top: 260px;
 }
 div.main div.body-outer div.body-inner .roadmap .obfuscated {
   background-color: rgba(0, 0, 0, 0.6);
@@ -329,64 +333,61 @@ div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask span {
   text-align: center;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask-a {
-  width: 303px;
-  height: 374px;
+  width: 240px;
+  height: 296px;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask-b {
-  width: 698px;
-  height: 374px;
-  left: 303px;
+  width: 558px;
+  height: 296px;
+  left: 240px;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask-c {
-  width: 303px;
-  height: 374px;
-  top: 374px;
+  width: 240px;
+  height: 296px;
+  top: 296px;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask-d {
-  width: 303px;
-  height: 374px;
-  top: 374px;
-  left: 303px;
+  width: 243px;
+  height: 296px;
+  top: 296px;
+  left: 240px;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .mask-e {
-  width: 395px;
-  height: 374px;
-  top: 374px;
-  left: 606px;
+  width: 314px;
+  height: 296px;
+  top: 296px;
+  left: 483px;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .label-a {
-  top: 374px;
+  top: 302px;
   position: relative;
   left: 0;
   display: block;
   z-index: 1;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .label-b {
-  top: 378px;
+  top: 301px;
   position: relative;
   display: block;
   z-index: 1;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .label-c {
-  top: -58px;
+  top: -55px;
   position: relative;
   display: block;
   z-index: 1;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .label-d {
-  top: -60px;
+  top: -56px;
   position: relative;
   display: block;
   z-index: 1;
 }
 div.main div.body-outer div.body-inner .roadmap .mask-anchor .label-e {
-  top: -60px;
+  top: -56px;
   position: relative;
   display: block;
   z-index: 1;
-}
-div.main div.body-outer div.body-inner .roadmap img {
-  width: 1000px;
 }
 div.main div.body-outer div.body-inner .block {
   text-align: left;

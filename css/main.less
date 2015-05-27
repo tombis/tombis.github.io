@@ -300,27 +300,29 @@ div.main {
       }
 
       .roadmap {
+        width: @maxed-width - 200px;
+        margin: 0 auto;
         .title-anchor {
           height: 0;
           h3.title-a {
             position: relative;
             .rotate(-90deg);
-            left: -530px;
-            top: 194px;
-            font-size: 30px;
+            left: -426px;
+            top: 159px;
+            font-size: 28px;
           }
           h3.title-b {
             position: relative;
-            left: 440px;
-            font-size: 30px;
-            top: 680px
+            left: 279px;
+            font-size: 28px;
+            top: 530px;
           }
           h3.title-c {
             position: relative;
             .rotate(90deg);
-            left: 530px;
-            font-size: 30px;
-            top: 360px
+            left: 425px;
+            font-size: 28px;
+            top: 260px;
           }
         }
         .obfuscated {
@@ -336,6 +338,7 @@ div.main {
           .mask {
             position: relative;
             transition: 1s;
+            //border: 1px solid red;
             span {
               background-color: fade(black, 60);
               font-size: 20px;
@@ -346,66 +349,66 @@ div.main {
             }
           }
           .mask-a {
-            width: 303px;
-            height: 374px;
+            width: 240px;
+            height: 296px;
           }
           .mask-b {
-            width: 698px;
-            height: 374px;
-            left: 303px;
+            width: 558px;
+            height: 296px;
+            left: 240px;
           }
           .mask-c {
-            width: 303px;
-            height: 374px;
-            top: 374px;
+            width: 240px;
+            height: 296px;
+            top: 296px;
           }
           .mask-d {
-            width: 303px;
-            height: 374px;
-            top: 374px;
-            left: 303px;
+            width: 243px;
+            height: 296px;
+            top: 296px;
+            left: 240px;
           }
           .mask-e {
-            width: 395px;
-            height: 374px;
-            top: 374px;
-            left: 606px;
+            width: 314px;
+            height: 296px;
+            top: 296px;
+            left: 483px;
           }
 
           .label-a {
-            top: 374px;
+            top: 302px;
             position: relative;
             left: 0;
             display: block;
             z-index: 1;
           }
           .label-b {
-            top: 378px;
+            top: 301px;
             position: relative;
             display: block;
             z-index: 1;
           }
           .label-c {
-            top: -58px;
+            top: -55px;
             position: relative;
             display: block;
             z-index: 1;
           }
           .label-d {
-            top: -60px;
+            top: -56px;
             position: relative;
             display: block;
             z-index: 1;
           }
           .label-e {
-            top: -60px;
+            top: -56px;
             position: relative;
             display: block;
             z-index: 1;
           }
         }
         img {
-          width: @maxed-width;
+          //width: @maxed-width - 200px;
         }
       }
 
