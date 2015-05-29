@@ -227,6 +227,10 @@
             $(document.body).css('background-color', $(this).attr("data-bg-color"));
 
             if (selectedPage === 'page2') {
+                if (timer != null) {
+                    clearTimeout(timer);
+                    timer = null;
+                }
                 current = 0;
                 timer = setTimeout(step, 1000);
             }
