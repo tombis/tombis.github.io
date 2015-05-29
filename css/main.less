@@ -299,116 +299,169 @@ div.main {
         }
       }
 
+      @road-width: @maxed-width - 200px;
       .roadmap {
-        width: @maxed-width - 200px;
-        margin: 0 auto;
-        .title-anchor {
-          height: 0;
-          h3.title-a {
-            position: relative;
-            .rotate(-90deg);
-            left: -426px;
-            top: 159px;
-            font-size: 28px;
-          }
-          h3.title-b {
-            position: relative;
-            left: 279px;
-            font-size: 28px;
-            top: 530px;
-          }
-          h3.title-c {
-            position: relative;
-            .rotate(90deg);
-            left: 425px;
-            font-size: 28px;
-            top: 260px;
-          }
-        }
-        .obfuscated {
-          background-color: fade(black, 60);
-        }
-        .highlighted {
-          span {
-            visibility: visible !important;
-          }
-        }
-        .mask-anchor {
-          height: 0;
-          .mask {
-            position: relative;
-            transition: 1s;
-            //border: 1px solid red;
-            span {
-              background-color: fade(black, 60);
-              font-size: 20px;
-              padding: 10px;
-              border-radius: 5px;
-              visibility: hidden;
-              text-align: center;
+        @media (min-width: @maxed-width) {
+          width: @road-width;
+          margin: 0 auto;
+          .title-anchor {
+            height: 0;
+            h3.title-a {
+              position: relative;
+              .rotate(-90deg);
+              left: -426px;
+              top: 159px;
+              font-size: 28px;
             }
+            h3.title-b {
+              position: relative;
+              left: 279px;
+              font-size: 28px;
+              top: 530px;
+            }
+            h3.title-c {
+              position: relative;
+              .rotate(90deg);
+              left: 425px;
+              font-size: 28px;
+              top: 260px;
+            }
+          }
+          .obfuscated {
+            background-color: fade(black, 60);
+          }
+          .highlighted {
+            span {
+              visibility: visible !important;
+            }
+          }
+          .mask-anchor {
+            height: 0;
+            .mask {
+              position: relative;
+              transition: 1s;
+              //border: 1px solid red;
+              span {
+                background-color: fade(black, 60);
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                visibility: hidden;
+                text-align: center;
+              }
+            }
+            .mask-a {
+              width: 240px;
+              height: 296px;
+            }
+            .mask-b {
+              width: 558px;
+              height: 296px;
+              left: 240px;
+            }
+            .mask-c {
+              width: 240px;
+              height: 296px;
+              top: 296px;
+            }
+            .mask-d {
+              width: 243px;
+              height: 296px;
+              top: 296px;
+              left: 240px;
+            }
+            .mask-e {
+              width: 314px;
+              height: 296px;
+              top: 296px;
+              left: 483px;
+            }
+
+            .label-a {
+              top: 302px;
+              position: relative;
+              left: 0;
+              display: block;
+              z-index: 1;
+            }
+            .label-b {
+              top: 301px;
+              position: relative;
+              display: block;
+              z-index: 1;
+            }
+            .label-c {
+              top: -55px;
+              position: relative;
+              display: block;
+              z-index: 1;
+            }
+            .label-d {
+              top: -56px;
+              position: relative;
+              display: block;
+              z-index: 1;
+            }
+            .label-e {
+              top: -56px;
+              position: relative;
+              display: block;
+              z-index: 1;
+            }
+          }
+        }
+        @media(max-width: @maxed-width) {
+          img {
+            display: none;
+          }
+          .mask {
+            background: url('../img/pinguins.png') no-repeat;
+            margin: 0 auto;
+          }
+          .mask-anchor {
+            margin: 60px 0;
           }
           .mask-a {
             width: 240px;
             height: 296px;
+            margin-top: 90px;
+            span {
+              height: 50px !important;
+              top: -70px !important;
+            }
           }
           .mask-b {
             width: 558px;
             height: 296px;
-            left: 240px;
+            background-position: -243px 0;
           }
           .mask-c {
             width: 240px;
             height: 296px;
-            top: 296px;
+            background-position: 0 -296px;
           }
           .mask-d {
             width: 243px;
             height: 296px;
-            top: 296px;
-            left: 240px;
+            background-position: -242px -297px;
           }
           .mask-e {
             width: 314px;
             height: 296px;
-            top: 296px;
-            left: 483px;
+            background-position: -487px -298px;
           }
 
-          .label-a {
-            top: 302px;
-            position: relative;
-            left: 0;
-            display: block;
-            z-index: 1;
+          .mask {
+            background-color: black;
+            span {
+              background-color: black;
+              position: relative;
+              top: -40px;
+              display: block;
+              height: 20px;
+              padding: 10px
+            }
           }
-          .label-b {
-            top: 301px;
-            position: relative;
-            display: block;
-            z-index: 1;
-          }
-          .label-c {
-            top: -55px;
-            position: relative;
-            display: block;
-            z-index: 1;
-          }
-          .label-d {
-            top: -56px;
-            position: relative;
-            display: block;
-            z-index: 1;
-          }
-          .label-e {
-            top: -56px;
-            position: relative;
-            display: block;
-            z-index: 1;
-          }
-        }
-        img {
-          //width: @maxed-width - 200px;
         }
       }
 
