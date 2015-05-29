@@ -294,7 +294,9 @@ div.main {
         }
 
         .copyright {
-          background-color: black;
+          @media (max-width: @maxed-width) {
+            background-color: black;
+          }
           @media (min-width: @maxed-width) {
             .rotate(90deg);
 
