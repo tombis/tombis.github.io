@@ -43,10 +43,10 @@
             <li data-page="page2" data-bg-color="#999">
                 <span>Aanbod</span>
             </li>
-            <li data-page="page3" data-bg-color="#999">
+            <li data-page="page3" data-bg-color="#444">
                 <span>Wie is ?</span>
             </li>
-            <li data-page="page4" data-bg-color="#999">
+            <li data-page="page4" data-bg-color="#444">
                 <span>Contact</span>
             </li>
         </ul>
@@ -156,7 +156,7 @@
                     </p>
 
                     <p>
-                        Ga je met mij in zee? Dan leggen we een afspraak vast waarin we verkennen hoe we elkaar kunnen
+                        Ga je met mij in zee? Dan leggen we een <a data-page="page4">afspraak</a> vast waarin we verkennen hoe we elkaar kunnen
                         tegemoet komen vanuit ieders gebekt zijn.
                     </p>
 
@@ -172,13 +172,19 @@
 
             <div class="block hidden page" id="page4">
                 <fieldset>
-                    <legend>Contact</legend>
+                    <legend>Contactgegevens</legend>
 
                     <p>
-                        <a href="tel:+32486257220">Tel. +32 (0)486.257220</a>
+                        Ayse Dogan - Anders Gebekt
+                        <br/>
+                        Ernest Claesstraat 47
+                        <br/>
+                        3271 Zichem
                     </p>
 
                     <p>
+                        <a href="tel:+32486257220">Tel. +32 (0)486.257220</a>
+                        <br/>
                         <a href="mailto:ayse.dogan@andersgebekt.be">ayse.dogan@andersgebekt.be</a>
                     </p>
                 </fieldset>
@@ -224,11 +230,11 @@
             timer = setTimeout(step, 2000)
         };
 
-        $(".tabs li").click(function () {
+        $("[data-page]").click(function () {
             $(".page").addClass("hidden");
             $(".tabs li").removeClass("active");
-            $(this).addClass("active");
             var selectedPage = $(this).attr("data-page");
+            $("[data-page=" + selectedPage + "]").addClass("active");
             $("#" + selectedPage).removeClass("hidden");
             $(document.body).css('background-color', $(this).attr("data-bg-color"));
 
