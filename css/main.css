@@ -96,7 +96,7 @@ textarea {
 blockquote {
   color: white;
   font-size: 30px;
-  font-family: 'oldnewspaper', serif;
+  font-family: 'Esteban';
 }
 blockquote p {
   display: inline;
@@ -487,6 +487,14 @@ div.main div.body-outer div.body-inner .block fieldset p {
 }
 div.main div.body-outer div.body-inner .block fieldset ul {
   margin: 0;
+  list-style: none;
+  padding: 0;
+}
+div.main div.body-outer div.body-inner .block fieldset ul + p {
+  margin-top: 1em;
+}
+div.main div.body-outer div.body-inner .block fieldset h3 {
+  margin-top: 0;
 }
 div.main div.body-outer div.body-inner .block fieldset .fotobg {
   width: 100%;
@@ -505,6 +513,13 @@ div.main div.body-outer div.body-inner .block fieldset > img {
   div.main div.body-outer div.body-inner .block fieldset > img {
     margin-right: 30px;
   }
+}
+div.main div.body-outer div.body-inner .block fieldset ul.story {
+  list-style: none;
+}
+div.main div.body-outer div.body-inner .block fieldset ul.story > li:before {
+  content: "-";
+  text-indent: -5px;
 }
 a.tooltip {
   outline: none;

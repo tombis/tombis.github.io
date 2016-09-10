@@ -140,7 +140,7 @@ textarea {
 blockquote {
   color: white;
   font-size: 30px;
-  font-family: 'oldnewspaper', serif;
+  font-family: 'Esteban';
   p {
     display: inline;
   }
@@ -506,6 +506,14 @@ div.main {
           }
           ul {
             margin: 0;
+            list-style: none;
+            padding: 0;
+          }
+          ul + p {
+            margin-top: 1em;
+          }
+          h3 {
+            margin-top: 0;
           }
           .fotobg {
             width: 100%;
@@ -517,6 +525,13 @@ div.main {
             }
             @media(min-width: 410px) {
               margin-right: 30px;
+            }
+          }
+          ul.story {
+            list-style: none;
+            > li:before {
+              content: "-";
+              text-indent: -5px;
             }
           }
         }
