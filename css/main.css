@@ -283,9 +283,10 @@ div.main div.body-outer div.body-inner .cover .subtitle {
   }
   div.main div.body-outer div.body-inner .roadmap .title-anchor {
     height: 0;
+    position: relative;
   }
   div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-a {
-    position: relative;
+    position: absolute;
     /* Safari */
     -webkit-transform: rotate(-90deg);
     /* Firefox */
@@ -296,18 +297,18 @@ div.main div.body-outer div.body-inner .cover .subtitle {
     -o-transform: rotate(-90deg);
     /* Internet Explorer */
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    left: -426px;
-    top: 159px;
+    left: -310px;
+    top: 250px;
     font-size: 28px;
   }
   div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-b {
-    position: relative;
+    position: absolute;
     left: 279px;
     font-size: 28px;
-    top: 530px;
+    top: 560px;
   }
   div.main div.body-outer div.body-inner .roadmap .title-anchor h3.title-c {
-    position: relative;
+    position: absolute;
     /* Safari */
     -webkit-transform: rotate(90deg);
     /* Firefox */
@@ -320,7 +321,8 @@ div.main div.body-outer div.body-inner .cover .subtitle {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     left: 425px;
     font-size: 28px;
-    top: 260px;
+    top: 368px;
+    width: 100%;
   }
   div.main div.body-outer div.body-inner .roadmap .obfuscated {
     background-color: rgba(0, 0, 0, 0.6);
