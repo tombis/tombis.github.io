@@ -139,8 +139,7 @@ textarea {
 
 blockquote {
   color: white;
-  font-size: 30px;
-  font-family: 'Esteban';
+  font-size: 33px;
   p {
     display: inline;
   }
@@ -151,11 +150,10 @@ blockquote {
 @maxed-width: 1000px;
 
 body {
-  background-color: @background-color;
+  background-image: radial-gradient( circle, #01224a, #020f25);
   color: white;
   transition: 1000ms;
-  //font-family: 'dickie', serif;
-  font-family: 'oldnewspaper', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 div.main {
@@ -204,13 +202,13 @@ div.main {
         cursor: pointer;
         color: white;
         @media (min-width: @maxed-width) {
-          width: 125px;
+          width: 100px;
           font-size: 24px;
           margin: 15px;
         }
         font-size: 17px;
         display: inline-block;
-        padding: 15px 0;
+        padding: 10px 0;
         text-align: center;
         transition: 500ms;
         margin: 5px;
@@ -285,12 +283,13 @@ div.main {
           @media (min-width: @maxed-width) {
             position: relative;
             top: 436px;
-            right: -488px;
+            right: -630px;
             height: 0;
             white-space: nowrap;
           }
 
-          font-size: 28px;
+          font-size: 20px;
+          font-family: 'oldnewspaper';
         }
 
         .copyright {
@@ -302,7 +301,7 @@ div.main {
 
             position: relative;
             left: 508px;
-            top: 222px;
+            top: 291px;
           }
         }
       }
@@ -318,13 +317,13 @@ div.main {
             h3.title-a {
               position: absolute;
               .rotate(-90deg);
-              left: -310px;
-              top: 250px;
+              left: -234px;
+              top: 319px;
               font-size: 28px;
             }
             h3.title-b {
               position: absolute;
-              left: 279px;
+              left: 405px;
               font-size: 28px;
               top: 560px;
             }
@@ -478,15 +477,12 @@ div.main {
       .block {
         text-align: left;
         min-height: 400px;
-        padding: 20px 30px;
-        border-radius: 3px;
-        background-color: black;
+        padding: 0 30px;
 
         //background-color: #333;
         color: white;
 
         fieldset {
-          font-family: 'Gentium Basic', serif;
           font-size: 20px;
           legend {
             font-size: 26px;
@@ -521,6 +517,7 @@ div.main {
             width: 100%;
           }
           >img {
+            width: 200px;
             float: left; background-color: #d7dad3; margin-bottom: 10px;
             @media(max-width: 360px) {
               width: 240px;
