@@ -147,10 +147,12 @@ blockquote {
 
 //@background-color: rgb(43, 108, 226);
 @background-color: black;
+@primary-light: #01224a;
+@primary-dark: #020f25;
 @maxed-width: 1000px;
 
 body {
-  background-image: radial-gradient( circle, #01224a, #020f25);
+  background-image: radial-gradient( circle, @primary-light, @primary-dark);
   color: white;
   transition: 1000ms;
   font-family: 'Barlow Condensed', sans-serif;
@@ -340,6 +342,7 @@ div.main {
             background-color: fade(black, 60);
           }
           .highlighted {
+            position: relative;
             span {
               visibility: visible !important;
             }
@@ -351,7 +354,7 @@ div.main {
               transition: 1s;
               //border: 1px solid red;
               span {
-                background-color: fade(black, 60);
+                background-color: fade(#005a5a, 60);
                 font-size: 20px;
                 padding: 10px;
                 border-radius: 5px;
