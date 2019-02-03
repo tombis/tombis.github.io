@@ -37,7 +37,8 @@
 <![endif]-->
 
 <div class="main">
-    <div class="header-tabs">
+    <p></p>
+    <div class="header-tabs fixed">
         <ul class="tabs">
             <li class="active" data-page="page1" data-bg-color="black">
                 <span>AG</span>
@@ -69,10 +70,6 @@
                 <img src="img/pinguin-white-s.svg" class="logo" alt="logo"/>
 
                 <div class="title">
-                    <blockquote>
-                        &ldquo; Onverwoestbaar is diegene die zowel het grootse als het kleine in zichzelf verdragen
-                        kan &rdquo;
-                    </blockquote>
                 </div>
                 <div class="copyright">
                     Copyright © 2016 AndersGebekt
@@ -259,7 +256,12 @@
             var selectedPage = $(this).attr("data-page");
             $("[data-page=" + selectedPage + "]").addClass("active");
             $("#" + selectedPage).removeClass("hidden");
-            $(document.body).css('background-color', $(this).attr("data-bg-color"));
+           if ('page1' === selectedPage) {
+               document.querySelector('.header-tabs').classList.add('fixed');
+           } else {
+               document.querySelector('.header-tabs').classList.remove('fixed');
+           }
+            //$(document.body).css('background-color', $(this).attr("data-bg-color"));
 
             if (selectedPage === 'page2') {
                 if (timer != null) {

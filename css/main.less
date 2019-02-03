@@ -146,15 +146,14 @@ blockquote {
 }
 
 //@background-color: rgb(43, 108, 226);
-@background-color: black;
 @primary-light: #01224a;
 @primary-dark: #020f25;
+@color-accent: #005a5a;
 @maxed-width: 1000px;
 
 body {
   background-image: radial-gradient( circle, @primary-light, @primary-dark);
   color: white;
-  transition: 1000ms;
   font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -173,11 +172,9 @@ div.main {
       font-family: 'oldnewspaper', sans-serif;
       font-size: 56px;
       @media (min-width: @maxed-width) {
-        .rotate();
-
         position: relative;
-        left: -541px;
-        top: -121px;
+        left: 0;
+        top: -88px;
       }
       img.logo {
         height: 88px;
@@ -195,37 +192,48 @@ div.main {
       text-align: right;
     }
 
-    .tabs {
-      display: inline-block;
-      bottom: -16px;
-      margin: 0;
+    &.fixed {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      margin-top: -283px;
+      margin-left: -83px;
+      z-index: 1;
 
-      li {
-        cursor: pointer;
-        color: white;
-        @media (min-width: @maxed-width) {
-          width: 100px;
-          font-size: 24px;
-          margin: 15px;
-        }
-        font-size: 17px;
-        display: inline-block;
-        padding: 10px 0;
-        text-align: center;
-        transition: 500ms;
-        margin: 5px;
-        border-bottom: 2px solid;
-        border-bottom-color: transparent;
-        &.active,&:hover {
-          border-bottom: 2px solid white;
-        }
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+      li[data-page="page1"] {
+        visibility: hidden;
       }
     }
+   }
 
+  .tabs {
+    display: inline-block;
+    bottom: -16px;
+    margin: 0;
+
+    li {
+      cursor: pointer;
+      color: #999;
+      @media (min-width: @maxed-width) {
+        width: 100px;
+        font-size: 24px;
+        margin: 15px;
+      }
+      font-size: 17px;
+      display: inline-block;
+      padding: 10px 0;
+      text-align: center;
+      margin: 5px;
+      border-bottom: 2px solid;
+      border-bottom-color: transparent;
+      &.active,&:hover {
+        color: white;
+      }
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   }
 
   div.body-outer {
@@ -284,26 +292,24 @@ div.main {
         .subtitle {
           @media (min-width: @maxed-width) {
             position: relative;
-            top: 436px;
-            right: -630px;
+            top: 376px;
+            right: -495px;
             height: 0;
             white-space: nowrap;
           }
 
-          font-size: 20px;
+          font-size: 26px;
           font-family: 'oldnewspaper';
         }
 
         .copyright {
           @media (max-width: @maxed-width) {
-            background-color: black;
+            padding: 10px;
           }
           @media (min-width: @maxed-width) {
-            .rotate(90deg);
-
-            position: relative;
-            left: 508px;
-            top: 291px;
+            position: fixed;
+            bottom: 30px;
+            font-size: 12px;
           }
         }
       }
@@ -339,7 +345,7 @@ div.main {
             }
           }
           .obfuscated {
-            background-color: fade(black, 60);
+            background-color: fade(@primary-dark, 60);
           }
           .highlighted {
             position: relative;
@@ -354,7 +360,7 @@ div.main {
               transition: 1s;
               //border: 1px solid red;
               span {
-                background-color: fade(#005a5a, 60);
+                background-color: fade(@color-accent, 60);
                 font-size: 20px;
                 padding: 10px;
                 border-radius: 5px;
@@ -464,9 +470,9 @@ div.main {
           }
 
           .mask {
-            background-color: black;
+            background-color: @primary-dark;
             span {
-              background-color: black;
+              background-color: @primary-dark;
               position: relative;
               top: -40px;
               display: block;
@@ -540,6 +546,12 @@ div.main {
       }
     }
   }
+}
+
+#page1 .tabs {
+  position: relative;
+  right: -419px;
+  top: -160px;
 }
 
 a.tooltip {outline:none; }
