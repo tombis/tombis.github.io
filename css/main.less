@@ -189,19 +189,17 @@ div.main {
   div.header-tabs {
     margin: 0 auto;
     @media (min-width: @maxed-width) {
-      text-align: right;
-    }
-
-    &.fixed {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      margin-top: -283px;
-      margin-left: -83px;
-      z-index: 1;
-
-      li[data-page="page1"] {
-        visibility: hidden;
+      &.fixed {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-top: -283px;
+        margin-left: -83px;
+        z-index: 1;
+  
+        li[data-page="page1"] {
+          visibility: hidden;
+        }
       }
     }
    }
