@@ -485,6 +485,11 @@ div.main div.body-outer div.body-inner .block fieldset legend {
   margin-bottom: 15px;
   padding: 5px 0;
 }
+div.main div.body-outer div.body-inner .block fieldset legend img {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #aaa;
+}
 div.main div.body-outer div.body-inner .block fieldset a {
   color: white;
   text-decoration: underline;
