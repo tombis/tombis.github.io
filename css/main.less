@@ -151,6 +151,10 @@ blockquote {
 @color-accent: #005a5a;
 @maxed-width: 1000px;
 
+html {
+  background-color: @primary-dark;
+}
+
 body {
   color: white;
   font-family: 'Barlow Condensed', sans-serif;
@@ -598,8 +602,8 @@ fieldset+fieldset {
     box-shadow: 0 15px 35px 0 rgba(42,51,83,.12),0 5px 15px rgba(0,0,0,.06) !important;
     h1 {
       border-radius: 3px 3px 0 0;
-      background-color: @color-accent;
-      color: white;
+      border-top: 5px solid @color-accent;
+      color: #444;
       margin: 0;
       padding: 0.5rem 1rem;
     }
