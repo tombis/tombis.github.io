@@ -63,17 +63,6 @@ body {
     margin: 0;
   }
 
-  .logo {
-    width: 3rem;
-    z-index: 1;
-    position: absolute;
-    left: 3rem;
-    top: 3rem;
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
-  }
-
   .hero {
     background: linear-gradient(214.23deg, #FFFFFF 20.24%, #EDE8E3 59.8%, #D2CECB 93.28%), linear-gradient(82.21deg, #DFDEDA 5.72%, #FDFCFA 94.49%);
     position: relative;
