@@ -39,7 +39,7 @@ body {
     font-size: 60px;
   }
   @media (max-width: $phone-width) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -102,6 +102,9 @@ body {
   .aanbod {
     background: #F5F5F5;
     padding: 3rem;
+    @media (max-width: $phone-width) {
+      padding: 1rem;
+    }
 
     .topics {
       margin: -1rem;
@@ -111,7 +114,7 @@ body {
 
       .topic {
         background: #EEEEEC;
-        padding: 0 2rem 1rem 2rem;
+        padding: 1rem 2rem 1rem 2rem;
         max-width: 30rem;
         line-height: 2;
         margin: 1rem;
@@ -122,6 +125,9 @@ body {
   .wie_is {
     background: #F3F0EC;
     padding: 3rem;
+    @media (max-width: $phone-width) {
+      padding: 1rem;
+    }
     .body {
       display: flex;
       @media (max-width: $tablet-width) {
