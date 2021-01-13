@@ -1,0 +1,177 @@
+$bodyGray: #C4C4C4;
+$typeGray: #949292;
+
+$heroTypeBackground: #EEEEEE;
+
+$tablet-width: 1000px;
+$phone-width: 768px;
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $typeGray;
+}
+
+html {
+  background-color: $bodyGray;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 50px;
+  @media (max-width: $tablet-width) {
+    font-size: 40px;
+  }
+  @media (max-width: $phone-width) {
+    font-size: 30px;
+  }
+}
+
+.title.is-large {
+  font-size: 70px;
+  @media (max-width: $tablet-width) {
+    font-size: 60px;
+  }
+  @media (max-width: $phone-width) {
+    font-size: 40px;
+  }
+}
+
+.title.is-small {
+  font-size: 30px;
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+  }
+  @media (max-width: $phone-width) {
+    font-size: 15px;
+  }
+}
+
+.main {
+  margin: 3rem;
+  padding: 0;
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  @media (max-width: $phone-width) {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .logo {
+    width: 3rem;
+    z-index: 1;
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+  }
+
+  .hero {
+    background: linear-gradient(214.23deg, #FFFFFF 20.24%, #EDE8E3 59.8%, #D2CECB 93.28%), linear-gradient(82.21deg, #DFDEDA 5.72%, #FDFCFA 94.49%);
+    position: relative;
+
+    .hero_image {
+      width: 40%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .hero_title {
+      position: absolute;
+      bottom: 0;
+      max-width: 50rem;
+      height: 25%;
+      left: 0;
+      right: 0;
+      background: rgba(241, 240, 238, 0.88);
+      padding: 2rem;
+      margin: auto;
+
+      .title {
+        text-align: center;
+      }
+    }
+  }
+
+  .aanbod {
+    background: #F5F5F5;
+    padding: 3rem;
+
+    .topics {
+      margin: -1rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+
+      .topic {
+        background: #EEEEEC;
+        padding: 0 2rem 1rem 2rem;
+        max-width: 30rem;
+        line-height: 2;
+        margin: 1rem;
+      }
+    }
+  }
+
+  .wie_is {
+    background: #F3F0EC;
+    padding: 3rem;
+    .body {
+      display: flex;
+      @media (max-width: $tablet-width) {
+        flex-wrap: wrap;
+      }
+      >* {
+        margin: 1rem;
+      }
+
+      .avatar {
+        height: 200px;
+      }
+      .bio {
+        flex-grow: 1;
+        line-height: 2;
+      }
+    }
+  }
+
+  .contact {
+    background: #733F09;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: $typeGray;
+
+    >* {
+      margin: 1rem;
+      @media (max-width: $tablet-width) {
+        margin: 0.75rem;
+      }
+      @media (max-width: $phone-width) {
+        margin: 0.5rem;
+      }
+    }
+
+    a {
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    em {
+      font-style: normal;
+      color: white;
+    }
+  }
+
+  .copyright {
+    padding: 1rem;
+    background-color: #F3F0EC;
+  }
+}
+
