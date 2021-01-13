@@ -83,12 +83,22 @@ body {
   position: absolute;
   bottom: 0;
   max-width: 50rem;
-  height: 25%;
+  height: 8rem;
   left: 0;
   right: 0;
   background: rgba(241, 240, 238, 0.88);
   padding: 2rem;
   margin: auto;
+}
+@media (max-width: 1000px) {
+  .main .hero .hero_title {
+    height: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .main .hero .hero_title {
+    height: 3rem;
+  }
 }
 .main .hero .hero_title .title {
   text-align: center;
