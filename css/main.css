@@ -147,6 +147,7 @@ body {
 }
 .main .wie_is .body .avatar {
   height: 200px;
+  border-radius: 5px;
 }
 .main .wie_is .body .bio {
   flex-grow: 1;
