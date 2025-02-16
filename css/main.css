@@ -12,6 +12,8 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
@@ -59,10 +61,11 @@ body {
 }
 
 .main {
+  max-width: 1300px;
   margin: 3rem;
   padding: 0;
   position: relative;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
   .main {
@@ -75,8 +78,7 @@ body {
   position: relative;
 }
 .main .hero .hero_image {
-  width: 40%;
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   display: block;
 }
@@ -90,10 +92,13 @@ body {
   background: rgba(241, 240, 238, 0.88);
   padding: 2rem;
   margin: auto;
+  border-radius: 10px 10px 0 0;
 }
 @media (max-width: 1000px) {
   .main .hero .hero_title {
     height: 6rem;
+    border-radius: 0;
+    padding: 1rem 0 2rem 0;
   }
 }
 @media (max-width: 768px) {
